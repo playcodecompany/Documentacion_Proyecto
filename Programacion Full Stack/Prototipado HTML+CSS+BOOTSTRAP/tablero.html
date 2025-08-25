@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tablero de Juego - PlayCode</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Montserrat&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+          <img src="logo.jpg" alt="Logo de PlayCode" style="max-height: 50px;" />
+          <h1 class="m-0">
+            <span class="play">Play</span><span class="code">Code</span>
+          </h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" 
+          aria-controls="navbarMenu" aria-expanded="false" aria-label="Mostrar/Ocultar menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+          <ul class="navbar-nav align-items-center">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link active" href="tablero.html">Jugar</a></li>
+            <li class="nav-item"><a class="nav-link" href="resultados1.html">Ranking</a></li>
+            <li class="nav-item">
+              <select class="form-select form-select-sm ms-3" onchange="cambiarIdioma(this.value)">
+                <option value="es" selected>Español</option>
+                <option value="en">English</option>
+              </select>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container my-5">
+    <div class="row g-4">
+      <section aria-label="Tablero del juego" class="col-lg-8 tablero">
+        <h2 class="mb-4 text-center">AnimalDraft</h2>
+        <img src="tablero.jpeg" alt="Tablero del juego" class="imagen-tablero" />
+      </section>
+
+      <aside class="col-lg-4 fichas">
+        <h3 class="mb-4">Fichas disponibles</h3>
+        <div class="ficha">Caracol</div>
+        <div class="ficha">Conejo</div>
+        <div class="ficha">Ratón de campo</div>
+        <div class="ficha">Camello</div>
+        <div class="ficha">Tortuga del desierto</div>
+        <div class="ficha">Serpiente de cascabel</div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 PlayCode. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function cambiarIdioma(lang) {
+      if (lang === "en") {
+        window.location.href = "tableroingles.html"; // Asegurate de tener esta versión en inglés si la querés usar
+      } else {
+        window.location.href = "tablero.html";
+      }
+    }
+  </script>
+</body>
+</html>

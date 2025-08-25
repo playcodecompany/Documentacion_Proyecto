@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resultados - PlayCode</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+          <img src="logo.jpg" alt="Logo de PlayCode" style="max-height: 50px;" />
+          <h1 class="m-0">
+            <span class="play">Play</span><span class="code">Code</span>
+          </h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" 
+          aria-controls="navbarMenu" aria-expanded="false" aria-label="Mostrar/Ocultar menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+          <ul class="navbar-nav align-items-center">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="tablero.html">Jugar</a></li>
+            <li class="nav-item"><a class="nav-link active" href="resultados1.html">Ranking</a></li>
+            <li class="nav-item">
+              <select class="form-select form-select-sm ms-3" onchange="cambiarIdioma(this.value)">
+                <option value="es" selected>Español</option>
+                <option value="en">English</option>
+              </select>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container my-5" style="max-width: 700px;">
+    <div class="ganador-msg">
+      ¡Felicidades, <strong>Luciana</strong>! Ganaste esta partida.
+    </div>
+
+    <table class="table table-striped table-hover shadow rounded">
+      <thead class="table-dark">
+        <tr>
+          <th>Posición</th>
+          <th>Jugador</th>
+          <th>Puntaje</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Luciana</td>
+          <td>23 puntos</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Alex</td>
+          <td>18 puntos</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Paula</td>
+          <td>14 puntos</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="d-flex justify-content-center gap-3 mt-4">
+      <a href="tablero.html" class="btn btn-playcode px-4">Volver a jugar</a>
+      <a href="index.html" class="btn btn-secondary px-4">Ir a inicio</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 PlayCode. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function cambiarIdioma(lang) {
+      if (lang === "en") {
+        window.location.href = "resultadosingles.html"; // Asegurate de tener esta versión en inglés
+      } else {
+        window.location.href = "resultados1.html";
+      }
+    }
+  </script>
+</body>
+</html>

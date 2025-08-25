@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bienvenida - PlayCode</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Montserrat&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+          <img src="logo.jpg" alt="Logo de PlayCode" style="max-height: 50px;" />
+          <h1 class="m-0">
+            <span class="play">Play</span><span class="code">Code</span>
+          </h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav" 
+          aria-controls="menuNav" aria-expanded="false" aria-label="Mostrar/Ocultar menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="menuNav">
+          <ul class="navbar-nav align-items-center">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="tablero.html">Jugar</a></li>
+            <li class="nav-item"><a class="nav-link" href="resultados1.html">Ranking</a></li>
+            <li class="nav-item">
+              <select class="form-select form-select-sm ms-3" onchange="cambiarIdioma(this.value)">
+                <option value="es" selected>Español</option>
+                <option value="en">English</option>
+              </select>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container my-5">
+    <section class="row align-items-center">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <div id="juegosCarrusel" class="carousel slide shadow rounded" data-bs-ride="carousel">
+          <div class="carousel-inner rounded">
+            <div class="carousel-item active">
+              <img src="Animaldraft.png" class="d-block w-100" alt="Imagen del juego Animaldraft" />
+            </div>
+            <div class="carousel-item">
+              <img src="tablero.jpeg" class="d-block w-100" alt="Tablero del juego" />
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#juegosCarrusel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#juegosCarrusel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <h2>¡Bienvenid@ a <span class="play">Play</span><span class="code">Code</span>!</h2>
+        <p class="lead">
+          Unite a la mesa digital para aprender, competir y divertirte.<br />
+          No hace falta instalar nada: jugá directo desde el navegador, donde y cuando quieras.<br /><br />
+          Cientos de <strong>jugadores</strong> ya disfrutan de <strong>Animaldraft</strong> (inspirado en Draftosaurus) y otros juegos interactivos.<br />
+          <strong>Gratis, fácil y muy divertido.</strong>
+        </p>
+        <a href="iniciosesion.html" class="boton-iniciars">Iniciar sesión</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 PlayCode. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function cambiarIdioma(lang) {
+      if (lang === "en") {
+        window.location.href = "indexingles.html"; 
+      } else {
+        window.location.href = "index.html";
+      }
+    }
+  </script>
+</body>
+</html>
+

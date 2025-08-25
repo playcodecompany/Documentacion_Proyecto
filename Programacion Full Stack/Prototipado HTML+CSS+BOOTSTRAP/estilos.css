@@ -1,0 +1,108 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.play {
+  color: #d62a00;
+}
+
+.code {
+  color: #333;
+}
+
+.boton-iniciars {
+  background-color: #d62a00;
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.3rem;
+  text-decoration: none;
+  margin-top: 1rem;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.boton-iniciars:hover {
+  background-color: #a11a00;
+  color: white;
+}
+
+footer {
+  background-color: #d62a00;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto;
+}
+
+.tablero {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  min-height: 400px;
+  text-align: center;
+}
+
+.imagen-tablero {
+  max-width: 100%;
+  max-height: 600px;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  margin: 0 auto;
+  display: block;
+}
+
+.fichas {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  min-height: 400px;
+}
+
+.ficha {
+  background: #7ca85b;
+  color: white;
+  border-radius: 0.4rem;
+  padding: 0.8rem 1rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: default;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.ficha:hover {
+  background-color: #ddbd86;
+}
+
+.ganador-msg {
+  background-color: #d62a00;
+  color: white;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+  box-shadow: 0 0 10px #d62a00;
+}
+
+.btn-playcode {
+  background-color: #d62a00;
+  color: white;
+}
+
+.btn-playcode:hover,
+.btn-playcode:focus {
+  background-color: #a11a00;
+  color: white;
+}
